@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: hello-world-multiple-
+spec:
+  entrypoint: step1
+  templates:
+  - name: step1           
+    container:
+      image: busybox
+      command: [echo]
+      args: ["hello world from step1"] 
+  - name: step2           
+    container:
+      image: busybox
+      command: [echo]
+      args: ["hello world from step2"] 

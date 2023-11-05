@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: dag-workflow-  
+spec:
+  entrypoint: diamond        
+  templates:
+  - name: diamond
+    dag:
+      tasks:
+      - name: A
+        template: container
+      - name: B
+        dependencies: [A]
+        template: container
+      - name: C
+        dependencies: [A]
+        template: container
+      - name: D
+        dependencies: [B, C]
+        template: container
+
+  - name: container            
+    container:
+      image: busybox
+      command: [echo]
+      args: ["hello world"]         
