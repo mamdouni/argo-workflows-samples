@@ -53,6 +53,8 @@ and to get access, don't forget this one :
 kubectl -n argo port-forward deployment/argo-server 2746:2746
 ```
 
+- https://localhost:2746/workflows/argo?limit=50
+
 
 ## References
 - https://argoproj.github.io/argo-workflows/quick-start/
