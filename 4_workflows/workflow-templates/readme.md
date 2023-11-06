@@ -43,7 +43,7 @@ spec:
 Let's create the template :
 
 ```shell
-argo template create hello-world-wt.yaml
+argo template create hello-world-wft.yaml
 ```
 
 ```log
@@ -53,7 +53,7 @@ Created:             Mon Nov 06 19:14:41 +0100 (now)
 ```
 
 ```shell
-argo submit --watch hello-world-w.yaml
+argo submit --watch hello-world-wf.yaml
 ```
 
 ```log
