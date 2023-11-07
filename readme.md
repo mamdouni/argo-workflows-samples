@@ -55,6 +55,14 @@ kubectl -n argo port-forward deployment/argo-server 2746:2746
 
 - https://localhost:2746/workflows/argo?limit=50
 
+## Features
+
+Some features will not be presented in this repo but they will be mentionned here as they are important to know.
+
+### Database
+
+If you want to keep completed workflows for a long time, you can use the workflow archive to save them in a Postgres or MySQL database.
+- https://argoproj.github.io/argo-workflows/workflow-archive/
 
 ## References
 - https://argoproj.github.io/argo-workflows/quick-start/
